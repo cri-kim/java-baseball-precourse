@@ -5,3 +5,37 @@
 
 ## 과제 제출 과정
 * [과제 제출 방법](https://github.com/next-step/nextstep-docs/tree/master/precourse)
+
+## 요구사항
+* 기본적으로 1부터 9까지 서로 다른 수로 이루어진 3자리의 수를 맞추는 게임이다.
+* 같은 수가 같은 자리에 있으면 스트라이크, 다른 자리에 있으면 볼, 같은 수가 전혀 없으면 포볼 또는 낫싱이란 힌트를 얻고,그 힌트를 이용해서 먼저 상대방(컴퓨터)의 수를 맞추면 승리한다.
+	* 상대방(컴퓨터)의 수가425일 때, 
+	* 123을 제시한경우 : 1스트라이크
+	* 456을 제시한경우 : 1스트라이크 1볼
+	* 789를 제시한경우 : 낫싱
+* 위 숫자 야구 게임에서 상대방의 역할을 컴퓨터가 한다. 컴퓨터는 1에서 9까지 서로 다른 임의의 수 3개를 선택한다.
+* 게임플레이어는 컴퓨터가 생각하고 있는 3개의 숫자를 입력하고, 컴퓨터는 입력한 숫자에 대한 결과를 출력한다.
+* 이 같은 과정을 반복해 컴퓨터가 선택한 3개의 숫자를 모두 맞히면 게임이 종료된다.
+* 게임을 종료한 후 게임을 다시 시작하거나 완전히 종료할 수 있다.
+* 사용자가 잘못된 값을 입력할 경우 [ERROR]로 시작하는 에러 메시지를 출력 하고 게임을 계속 진행 할 수 있어야 한다.
+
+## 기능 목록
+* Game
+	- validation : 1부터 9까지 서로 다른 수로 이루어진 3자리
+* Computer
+	- createNumber : 숫자 생성
+	- isFinish : 게임 종료 확인
+	- hasStrike : strike 존재 여부 확인
+	- hasBall : ball 존재 여부 확인
+	- isNothing : nothing 확인
+	- getStrikeCount : strike 갯수 반환
+	- getBallCount : ball 갯수 반환
+* Player
+ 	- isError : error handling 
+ 	- isNumeric : 숫자 확인
+	- getMatchNumberCount : index와 target 값의 매칭에 따라 0(false)과 1(true)의 값 반환
+	- getContainNumberCount : target 값의 포함여부에 따라 0(false)과 1(true)의 값 반환
+* 입출력 기능
+	- 게임 진행 여부 값 입력
+	- 게이머가 입력하는 값 입력
+	- 에러 핸들링
