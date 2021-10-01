@@ -33,8 +33,6 @@
 * Player
  	- isError : error handling 
  	- isNumeric : 숫자 확인
-	- getMatchNumberCount : index와 target 값의 매칭에 따라 0(false)과 1(true)의 값 반환
-	- getContainNumberCount : target 값의 포함여부에 따라 0(false)과 1(true)의 값 반환
 * 입출력 기능
 	- 게임 진행 여부 값 입력
 	- 게이머가 입력하는 값 입력
