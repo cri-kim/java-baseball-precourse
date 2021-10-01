@@ -55,4 +55,8 @@ public class Computer extends Game<Integer>{
 		}
 		return cnt;
 	}
+	
+	public boolean isFinish(Player player) {
+		return !player.isError() && getStrikeCount(player) == Constant.GAME_NUM_SIZE;
+	}
 }
