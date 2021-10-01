@@ -39,4 +39,11 @@ public class Player extends Game<String>{
 		return true;
 	}
 
+	public int getMatchNumberCount(int i, String target) {
+		if (numbers.get(i).equals(target)) {
+			return 1;
+		}
+		return 0;
+	}
+
 }

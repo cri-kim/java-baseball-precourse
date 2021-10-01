@@ -27,5 +27,15 @@ public class Computer extends Game<Integer>{
 	private void setNumbers(int n) {
 		numbers = new ArrayList<String>(Arrays.asList(String.valueOf(n).split("")));
 	}
-	
+		
+	public boolean hasStrike(Player player) {
+		return getStrikeCount(player) > 0;
+	}
+	public int getStrikeCount(Player player) {
+		int cnt = 0;
+		for(int i=0;i<Constant.GAME_NUM_SIZE ; i++) {
+			cnt += player.getMatchNumberCount(i, numbers.get(i));
+		}
+		return cnt;
+	}
 }
