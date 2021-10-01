@@ -46,4 +46,11 @@ public class Player extends Game<String>{
 		return 0;
 	}
 
+	public int getContainNumberCount(int i, String target) {
+		if (getMatchNumberCount(i, target) == 0 && numbers.contains(target)) {
+			return 1;
+		}
+		return 0;
+	}
+
 }
