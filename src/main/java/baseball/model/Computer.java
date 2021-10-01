@@ -36,6 +36,10 @@ public class Computer extends Game<Integer>{
 		return getBallCount(player) > 0;
 	}
 	
+	public boolean isNothing(Player player) {
+		return getStrikeCount(player) == 0 && getBallCount(player)== 0;
+	}
+	
 	public int getStrikeCount(Player player) {
 		int cnt = 0;
 		for(int i=0;i<Constant.GAME_NUM_SIZE ; i++) {
