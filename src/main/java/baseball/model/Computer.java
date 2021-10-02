@@ -11,21 +11,24 @@ public class Computer extends Game<Integer>{
 
 	private List<String> numbers;
 	
+	private int number;
+	
 	public Computer() {
-		createNumber();
+		number = createNumber();
+		numbers = new ArrayList<String>(Arrays.asList(String.valueOf(number).split("")));
 	}
 	
-	private void createNumber() {
+	private int createNumber() {
 		int n = 0;
 		do{
 			n = Randoms.pickNumberInRange(100, 999);
 		}
 		while(!valiation(n));
-		setNumbers(n);
+		return n;
 	}
 	
-	private void setNumbers(int n) {
-		numbers = new ArrayList<String>(Arrays.asList(String.valueOf(n).split("")));
+	public int getNumber() {
+		return number;
 	}
 	
 	public boolean hasStrike(Player player) {
